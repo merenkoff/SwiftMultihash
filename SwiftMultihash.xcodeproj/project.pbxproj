@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,9 @@
 		AB7B6F4D1B1A2DDF0035574A /* Sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7B6F4C1B1A2DDF0035574A /* Sum.swift */; };
 		ABF69FE21B0A79CF00BFED31 /* SwiftMultihashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF69FE11B0A79CF00BFED31 /* SwiftMultihashTests.swift */; };
 		ABF69FEC1B0A79EB00BFED31 /* SwiftMultihash.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF69FEB1B0A79EB00BFED31 /* SwiftMultihash.swift */; };
+		B6574685251B74C9001777CE /* VarInt in Frameworks */ = {isa = PBXBuildFile; productRef = B6574684251B74C9001777CE /* VarInt */; };
+		B657468C251B86B0001777CE /* Base58Swift in Frameworks */ = {isa = PBXBuildFile; productRef = B657468B251B86B0001777CE /* Base58Swift */; };
+		B6DB0E14251B8A4700A2E6A4 /* SwiftHex in Frameworks */ = {isa = PBXBuildFile; productRef = B6DB0E13251B8A4700A2E6A4 /* SwiftHex */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,15 +30,15 @@
 
 /* Begin PBXFileReference section */
 		AB2D11AF1B1A7B450085D7FA /* SwiftSumTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSumTests.swift; sourceTree = "<group>"; };
-		AB33AB0F1B1C8C41004CBA52 /* Io.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Io.swift; sourceTree = SOURCE_ROOT; };
+		AB33AB0F1B1C8C41004CBA52 /* Io.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Io.swift; path = Sources/SwiftMultihash/Io.swift; sourceTree = SOURCE_ROOT; };
 		AB33AB111B2095B2004CBA52 /* SwiftIOTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftIOTests.swift; sourceTree = "<group>"; };
-		AB7B6F4C1B1A2DDF0035574A /* Sum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sum.swift; path = ../Sum.swift; sourceTree = "<group>"; };
+		AB7B6F4C1B1A2DDF0035574A /* Sum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sum.swift; sourceTree = "<group>"; };
 		ABF69FCF1B0A79CF00BFED31 /* SwiftMultihash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftMultihash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABF69FD31B0A79CF00BFED31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABF69FDA1B0A79CF00BFED31 /* SwiftMultihashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftMultihashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABF69FE01B0A79CF00BFED31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABF69FE11B0A79CF00BFED31 /* SwiftMultihashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMultihashTests.swift; sourceTree = "<group>"; };
-		ABF69FEB1B0A79EB00BFED31 /* SwiftMultihash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftMultihash.swift; sourceTree = SOURCE_ROOT; };
+		ABF69FEB1B0A79EB00BFED31 /* SwiftMultihash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftMultihash.swift; path = Sources/SwiftMultihash/SwiftMultihash.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +46,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6DB0E14251B8A4700A2E6A4 /* SwiftHex in Frameworks */,
+				B6574685251B74C9001777CE /* VarInt in Frameworks */,
+				B657468C251B86B0001777CE /* Base58Swift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +68,7 @@
 				ABF69FD11B0A79CF00BFED31 /* SwiftMultihash */,
 				ABF69FDE1B0A79CF00BFED31 /* SwiftMultihashTests */,
 				ABF69FD01B0A79CF00BFED31 /* Products */,
+				B657467E251B7042001777CE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,7 +89,8 @@
 				AB7B6F4C1B1A2DDF0035574A /* Sum.swift */,
 				ABF69FD21B0A79CF00BFED31 /* Supporting Files */,
 			);
-			path = SwiftMultihash;
+			name = SwiftMultihash;
+			path = Sources/SwiftMultihash;
 			sourceTree = "<group>";
 		};
 		ABF69FD21B0A79CF00BFED31 /* Supporting Files */ = {
@@ -112,6 +120,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B657467E251B7042001777CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -139,6 +154,11 @@
 			dependencies = (
 			);
 			name = SwiftMultihash;
+			packageProductDependencies = (
+				B6574684251B74C9001777CE /* VarInt */,
+				B657468B251B86B0001777CE /* Base58Swift */,
+				B6DB0E13251B8A4700A2E6A4 /* SwiftHex */,
+			);
 			productName = SwiftMultihash;
 			productReference = ABF69FCF1B0A79CF00BFED31 /* SwiftMultihash.framework */;
 			productType = "com.apple.product-type.framework";
@@ -191,6 +211,11 @@
 				Base,
 			);
 			mainGroup = ABF69FC51B0A79CF00BFED31;
+			packageReferences = (
+				B6574683251B74C9001777CE /* XCRemoteSwiftPackageReference "VarInt" */,
+				B657468A251B86B0001777CE /* XCRemoteSwiftPackageReference "Base58Swift" */,
+				B6DB0E12251B8A4700A2E6A4 /* XCRemoteSwiftPackageReference "SwiftHex" */,
+			);
 			productRefGroup = ABF69FD01B0A79CF00BFED31 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -412,9 +437,13 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = SwiftMultihash/Info.plist;
+				INFOPLIST_FILE = Sources/SwiftMultihash/Info.plist;
 				INSTALL_PATH = "@rpath";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = "";
 				MACH_O_TYPE = mh_dylib;
 				PRODUCT_BUNDLE_IDENTIFIER = "Terminal-Glow.$(PRODUCT_NAME:rfc1034identifier)";
@@ -451,16 +480,21 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = SwiftMultihash/Info.plist;
+				INFOPLIST_FILE = Sources/SwiftMultihash/Info.plist;
 				INSTALL_PATH = "@rpath";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = "";
 				MACH_O_TYPE = mh_dylib;
 				PRODUCT_BUNDLE_IDENTIFIER = "Terminal-Glow.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_INCLUDE_PATHS = "";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 5.0;
 			};
@@ -480,7 +514,14 @@
 				);
 				INFOPLIST_FILE = SwiftMultihashTests/Info.plist;
 				LD_DYLIB_INSTALL_NAME = "@rpath";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Carthage/Build/Mac/ $(PROJECT_DIR)/Carthage/Build/iOS/";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+					"@loader_path/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/Mac/",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/",
+				);
 				MACH_O_TYPE = mh_dylib;
 				PRODUCT_BUNDLE_IDENTIFIER = "Terminal-Glow.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -501,12 +542,20 @@
 				"FRAMEWORK_SEARCH_PATHS[sdk=macosx*]" = "$(PROJECT_DIR)/Carthage/Build/Mac";
 				INFOPLIST_FILE = SwiftMultihashTests/Info.plist;
 				LD_DYLIB_INSTALL_NAME = "@rpath";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Carthage/Build/Mac/ $(PROJECT_DIR)/Carthage/Build/iOS/";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+					"@loader_path/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/Mac/",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/",
+				);
 				MACH_O_TYPE = mh_dylib;
 				PRODUCT_BUNDLE_IDENTIFIER = "Terminal-Glow.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 5.0;
 				VALID_ARCHS = "i386 x86_64 armv7 armv7s arm64";
@@ -544,6 +593,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B6574683251B74C9001777CE /* XCRemoteSwiftPackageReference "VarInt" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/NeoTeo/VarInt";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		B657468A251B86B0001777CE /* XCRemoteSwiftPackageReference "Base58Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/keefertaylor/Base58Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.0;
+			};
+		};
+		B6DB0E12251B8A4700A2E6A4 /* XCRemoteSwiftPackageReference "SwiftHex" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/merenkoff/SwiftHex";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B6574684251B74C9001777CE /* VarInt */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B6574683251B74C9001777CE /* XCRemoteSwiftPackageReference "VarInt" */;
+			productName = VarInt;
+		};
+		B657468B251B86B0001777CE /* Base58Swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B657468A251B86B0001777CE /* XCRemoteSwiftPackageReference "Base58Swift" */;
+			productName = Base58Swift;
+		};
+		B6DB0E13251B8A4700A2E6A4 /* SwiftHex */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B6DB0E12251B8A4700A2E6A4 /* XCRemoteSwiftPackageReference "SwiftHex" */;
+			productName = SwiftHex;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ABF69FC61B0A79CF00BFED31 /* Project object */;
 }

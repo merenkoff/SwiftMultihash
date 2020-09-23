@@ -8,7 +8,8 @@
 
 import Foundation
 import SwiftHex
-import SwiftBase58
+
+import Base58Swift
 
 import VarInt
 
@@ -137,12 +138,14 @@ public func fromHexString(_ theString: String) throws -> Multihash {
 }
 
 public func b58String(_ mhash: Multihash) -> String {
-    return SwiftBase58.encode(mhash.value)
+    return Base58.base58Encode(mhash.value)
 }
 
 
 public func fromB58String(_ str: String) throws -> Multihash {
-    let decodedBytes = SwiftBase58.decode(str)
+    guard let decodedBytes = Base58.base58Decode(str) else {
+        throw MultihashError.hexConversionFail
+    }
     return try cast(decodedBytes)
 }
 

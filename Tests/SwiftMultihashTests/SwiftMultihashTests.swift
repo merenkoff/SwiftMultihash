@@ -287,4 +287,7 @@ class SwiftMultihashTests: XCTestCase {
         }
     }
     
+    static var allTests = [
+        ("testEncode", testEncode),
+    ]
 }
